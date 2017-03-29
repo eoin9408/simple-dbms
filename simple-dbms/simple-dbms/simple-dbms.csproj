@@ -95,6 +95,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\simple-dbms.Data\simple-dbms.Data.csproj">
+      <Project>{551ae8fd-b410-4cea-8537-f28a725c15f5}</Project>
+      <Name>simple-dbms.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\simple-dbms.Services\simple-dbms.Services.csproj">
+      <Project>{477ee646-ef01-4e72-9004-8969cf792877}</Project>
+      <Name>simple-dbms.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
