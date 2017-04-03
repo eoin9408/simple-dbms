@@ -1,9 +1,10 @@
-﻿using System;
+﻿using simple_dbms.Data.Server;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 
-namespace simple_dbms
+namespace simple_dbms.Data.Database
 {
     public class Database : IDatabase
     {
@@ -13,22 +14,20 @@ namespace simple_dbms
         {
             this.serverInstance = serverInstance;
         }
-
-        
-        DataTable ExecuteQuery(string query)
+                
+        public DataTable ExecuteQuery(string query)
         {
             throw new NotImplementedException();
         }
 
-        ICollection<T> ExecuteQuery<T>(string query)
+        public ICollection<T> ExecuteQuery<T>(string query)
         {
             throw new NotImplementedException();
         }
 
-        ICollection<T> Query<T>(IQueryable<T> query)
+        public ICollection<T> Query<T>(IQueryable<T> query)
         {
             throw new NotImplementedException();
-        }
-        
+        }        
     }
 }

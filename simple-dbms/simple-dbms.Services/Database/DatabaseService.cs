@@ -1,22 +1,23 @@
-﻿using System.Collections.Generic;
+﻿using simple_dbms.Data.Database;
+using System.Collections.Generic;
 using System.Data;
 
-namespace simple_dbms
+namespace simple_dbms.Services
 {
     public class DatabaseService
     {
-        public IDatabase db { get; set; }
+        private readonly IDatabase database;
 
-        public DatabaseService(IDatabase db)
+        public DatabaseService(IDatabase database)
         {
-            this.db = db;
+            this.database = database;
         }
 
         public IEnumerable<string> GetDatabases()
         {
             int columnIndex = 0;
             List<string> result = new List<string>();
-            DataTable table = db.ExecuteQuery("SELECT * FROM sys.databases");
+            DataTable table = database.ExecuteQuery("SELECT * FROM sys.databases");
             for(int i = 0; i < table.Columns.Count; i++)
             {
                 if(table.Columns[i].ColumnName == "name")
