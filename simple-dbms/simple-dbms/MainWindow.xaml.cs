@@ -22,7 +22,6 @@ namespace simple_dbms
     {
         public MainWindow()
         {
-            DatabaseService dbs
             InitializeComponent();
         }
     }
