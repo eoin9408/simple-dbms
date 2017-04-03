@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace simple_dbms.Data.ServerInstance
+namespace simple_dbms.Data.Server
 {
     public class ServerInstance : IServerInstance
     {
@@ -34,6 +30,11 @@ namespace simple_dbms.Data.ServerInstance
         
         public DataTable Select(string query)
         {
+            if (query == null)
+            {
+                throw new ArgumentNullException(nameof(query));
+            }
+
             var connection = GetConnection();
             connection.Open();
 

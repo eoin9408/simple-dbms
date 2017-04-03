@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace simple_dbms.Data.ServerInstance
+namespace simple_dbms.Data.Server
 {
     public interface IServerInstance
     {

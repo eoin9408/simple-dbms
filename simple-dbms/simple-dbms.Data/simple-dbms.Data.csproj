@@ -41,8 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServerInstance\IServerInstance.cs" />
-    <Compile Include="ServerInstance\ServerInstance.cs" />
+    <Compile Include="Server\IServerInstance.cs" />
+    <Compile Include="Server\ServerInstance.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
